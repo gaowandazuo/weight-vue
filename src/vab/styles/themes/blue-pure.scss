@@ -1,0 +1,383 @@
+/**
+ * @description 纯-蓝
+ */
+
+body.vab-theme-blue-pure {
+  $base-menu-background: #3687e1;
+  $base-color-blue: #1890ff;
+  $base-color-blue-light: mix($base-color-white, $base-color-blue, 90%);
+  $base-color-blue-dark: #5499e5;
+
+  @import '../default.scss';
+
+  @mixin container {
+    color: #fff !important;
+    background: $base-menu-background !important;
+  }
+
+  @mixin container-menu {
+    color: #000000 !important;
+    background: #fff !important;
+  }
+
+  @mixin container-column {
+    color: #fff !important;
+    background: $base-menu-background !important;
+  }
+
+  @mixin active {
+    &:hover {
+      color: $base-color-blue !important;
+      background-color: $base-color-blue-light !important;
+    }
+
+    &.is-active {
+      color: $base-color-blue !important;
+      background-color: $base-color-blue-light !important;
+    }
+  }
+
+  .logo-container-common,
+  .logo-container-vertical,
+  .logo-container-horizontal,
+  .logo-container-comprehensive,
+  .logo-container-float {
+    @include container;
+
+    .title,
+    .vab-icon {
+      @include container;
+    }
+  }
+
+  .logo-container-column {
+    @include container-menu;
+
+    .title {
+      @include container-menu;
+    }
+
+    .logo,
+    .vab-icon {
+      @include container-column;
+    }
+  }
+
+  .vab-column-bar-container {
+    .el-tabs {
+      @include container-column;
+
+      .el-tabs__nav-wrap.is-left {
+        background: #f7faff !important;
+      }
+
+      .el-tabs__item,
+      .el-tabs__nav {
+        @include container-column;
+      }
+
+      .el-tabs__header .el-tabs__item.is-active {
+        color: $base-color-white !important;
+        background: $base-color-blue !important;
+      }
+    }
+
+    .el-menu {
+      .el-menu-item.is-active,
+      .el-submenu__title.is-active,
+      .el-menu-item:hover,
+      .el-submenu__title:hover {
+        i {
+          color: $base-color-blue !important;
+        }
+
+        color: $base-color-blue !important;
+        background-color: $base-color-blue-light !important;
+      }
+    }
+
+    &-card {
+      .el-tabs {
+        .el-tabs__header .el-tabs__item {
+          &.is-active {
+            background: transparent !important;
+            .vab-column-grid {
+              color: #fff !important;
+              background: $base-color-blue-dark !important;
+            }
+          }
+        }
+      }
+    }
+
+    &-arrow {
+      .el-tabs {
+        .el-tabs__item {
+          &.is-active {
+            color: $base-color-black !important;
+            background: transparent !important;
+
+            .vab-column-grid {
+              background: transparent !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .vab-layout-common {
+    .el-menu {
+      @include container-menu;
+
+      .el-submenu__title {
+        @include container-menu;
+      }
+
+      .el-menu-item {
+        @include container-menu;
+      }
+    }
+
+    .vab-side-bar,
+    .comprehensive-bar-container {
+      @include container-menu;
+      box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08) !important;
+
+      .el-menu-item {
+        @include active;
+      }
+    }
+  }
+
+  .vab-layout-vertical,
+  .vab-layout-comprehensive,
+  .vab-layout-float {
+    .vab-side-bar .el-menu {
+      .el-menu-item.is-active,
+      .el-submenu__title.is-active,
+      .el-menu-item:hover,
+      .el-submenu__title:hover {
+        i {
+          color: #fff !important;
+        }
+
+        color: #fff !important;
+        background-color: $base-color-blue-dark !important;
+      }
+    }
+
+    .el-menu {
+      @include container;
+
+      .el-submenu__title {
+        @include container;
+      }
+
+      .el-menu-item {
+        @include container;
+      }
+    }
+    .vab-side-bar,
+    .comprehensive-bar-container {
+      @include container-column;
+      box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08) !important;
+
+      .el-menu-item {
+        @include active;
+      }
+    }
+  }
+
+  .vab-layout-horizontal {
+    .vab-header .vab-main .el-menu {
+      .el-menu-item.is-active.is-active,
+      .el-submenu__title.is-active,
+      .el-menu-item:hover,
+      .el-submenu__title:hover {
+        i {
+          color: #fff !important;
+        }
+
+        color: #fff !important;
+        background-color: $base-color-blue-dark !important;
+      }
+    }
+    .el-menu {
+      @include container;
+
+      .el-submenu__title {
+        @include container;
+      }
+
+      .el-menu-item {
+        @include container;
+      }
+    }
+  }
+
+  .vab-layout-float {
+    .el-scrollbar__view .el-menu--collapse.el-menu li.el-submenu.is-active {
+      .el-submenu__title {
+        background-color: transparent !important;
+      }
+      > .el-submenu__title {
+        color: #fff !important;
+        background-color: $base-color-blue-dark !important;
+      }
+    }
+  }
+
+  .vab-header {
+    @include container;
+
+    .right-panel {
+      .user-name,
+      .user-name *,
+      > i,
+      > div > i,
+      > span > i,
+      > div > span > i,
+      > svg,
+      > div > svg,
+      > span > svg,
+      > div > span > svg {
+        @include container;
+      }
+    }
+
+    .vab-main {
+      @include container;
+
+      .ri-notification-line {
+        color: #fff !important;
+      }
+
+      .el-menu {
+        &--horizontal {
+          .el-menu-item {
+            &.is-active {
+              @include active;
+            }
+          }
+
+          .el-submenu,
+          .el-menu-item {
+            @include active;
+          }
+        }
+      }
+    }
+  }
+
+  .vab-tabs {
+    &-more {
+      &-active,
+      &:hover {
+        .vab-tabs-more-icon {
+          .box:before,
+          .box:after {
+            background: $base-color-blue !important;
+          }
+        }
+      }
+    }
+
+    .vab-tabs-content-card {
+      .el-tabs__header {
+        .el-tabs__item {
+          &.is-active {
+            color: $base-color-blue !important;
+            background: $base-color-blue-light-9 !important;
+            border: 1px solid $base-color-blue !important;
+          }
+
+          &:hover {
+            border: 1px solid $base-color-blue !important;
+          }
+        }
+      }
+    }
+
+    .vab-tabs-content-smart {
+      .el-tabs__header {
+        .el-tabs__item {
+          &.is-active {
+            background: $base-color-blue-light-9 !important;
+          }
+
+          &:after {
+            background-color: $base-color-blue !important;
+          }
+
+          &:hover {
+            background: $base-color-blue-light-9 !important;
+          }
+        }
+      }
+    }
+
+    .vab-tabs-content-smooth {
+      .el-tabs__header {
+        .el-tabs__item {
+          &.is-active {
+            color: $base-color-blue !important;
+            background: $base-color-blue-light-9 !important;
+
+            &:hover {
+              color: $base-color-blue !important;
+              background: $base-color-blue-light-9 !important;
+            }
+          }
+
+          &:hover {
+            color: $base-color-black !important;
+          }
+        }
+      }
+    }
+  }
+
+  .step-form-container {
+    .el-steps {
+      .el-step__head.is-process {
+        color: $base-color-blue !important;
+        border-color: $base-color-blue !important;
+
+        .el-step__icon.is-text {
+          color: $base-color-blue !important;
+          background: mix($base-color-white, $base-color-blue, 90%) !important;
+        }
+
+        .el-step__line {
+          background: $base-color-blue !important;
+        }
+      }
+
+      .el-step__title.is-process {
+        color: $base-color-blue !important;
+      }
+
+      .el-step__description.is-process {
+        color: $base-color-blue !important;
+      }
+
+      .el-step__head.is-finish {
+        .el-step__icon.is-text {
+          color: $base-color-white !important;
+          background: $base-color-blue !important;
+        }
+
+        .el-step__line {
+          background: $base-color-blue !important;
+        }
+      }
+    }
+  }
+}
+
+.g-dialog {
+  .el-dialog {
+    border-top: 5px solid $base-color-blue;
+  }
+}

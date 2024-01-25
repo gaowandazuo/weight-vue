@@ -1,0 +1,97 @@
+{
+  "//": "标题",
+  "title": "浪潮智慧水利开发框架",
+
+  "//": "版权信息",
+  "copyright": "浪潮智慧科技",
+
+  "//": "加载时显示文字",
+  "loadingText": "正在加载中...",
+
+  "//": "语言类型zh、en",
+  "i18n": "zh",
+
+  "//": "是否开启logo，不显示时设置false；将logo文件放置到根路径下，并填写logo图片名称（包括扩展名）,图片大小可自适应",
+  "logo": "/logo.png",
+
+  "//": "使用本地文件时，将.ico文件放置到根路径下。使用远程地址时，填写完整路径",
+  "favicon": "/favicon.ico",
+
+  "//": "布局种类：横向布局horizontal、纵向布局vertical、分栏布局column、综合布局comprehensive、常规布局common、浮动布局float、纯净布局pure",
+  "layout": "common",
+
+  "//": "主题名称：默认blue-black、blue-white、green-black、green-white、渐变ocean、red-white、red-black",
+  "themeName": "blue-black",
+
+  "//": "菜单背景 none、vab-background",
+  "background": "none",
+
+  "//": "分栏风格(仅针对分栏布局column时生效)：横向风格horizontal、纵向风格vertical、卡片风格card、箭头风格arrow",
+  "columnStyle": "card",
+
+  "//": "是否开启标签页",
+  "showTabs": true,
+
+  "//": "显示标签页时标签页样式：卡片风格card、灵动风格smart、圆滑风格smooth",
+  "tabsBarStyle": "smooth",
+
+  "//": "是否开启语言选择组件",
+  "showLanguage": true,
+
+  "//": "是否开启刷新组件",
+  "showRefresh": true,
+
+  "//": "是否开启搜索组件",
+  "showSearch": true,
+
+  "//": "是否开启主题组件",
+  "showTheme": true,
+
+  "//": "是否开启通知组件",
+  "showNotice": true,
+
+  "//": "是否开启全屏组件",
+  "showFullScreen": true,
+
+  "//": "纵向布局、常规布局、综合布局时是否默认收起左侧菜单（不支持分栏布局、横向布局）",
+  "collapse": true,
+
+  "//": "是否开启登录拦截",
+  "loginInterception": false,
+
+  "//": "使用业务中台认证登录",
+  "loginYWZT": false,
+
+  "//": "客户端标识",
+  "appApiKey": "shuili-products",
+
+  "//": "客户端密钥",
+  "appSecretKey": "o63pnu09r5riogtt1wuo4atz0ptdqbrx",
+
+  "//": "登陆后返回地址",
+  "appRedirectUri": "http://localhost:10001/auth-redirect",
+
+  "//": "指定获取access token的URI",
+  "appAccessTokenUri": "http://10.110.60.28:30123/auth/oauth/token",
+
+  "//": "用户跳转去获取access token的URI",
+  "appUserAuthorizationUri": "http://10.110.60.28:30123/auth/oauth/authorize",
+
+  "//": "注销url",
+  "vueAppLogoutUri": "/auth/v1/token/globallogout",
+
+  "//": "client的scope",
+  "appScope": "trust",
+
+  "//": "API网关地址",
+  "baseURL": "/api",
+
+  "//": "是否使用应用中心配置",
+  "useConfigFromCenter": false,
+
+  "//": "intelligence(前端导出路由)和all(bsp导出路由)两种方式,使用bsp方式，必须开启业务中台认证登录！！！！！",
+  "authentication": "intelligence",
+
+  "//": "bsp菜单id",
+  "menuTypeId": "wuu"
+}
